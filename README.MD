@@ -178,7 +178,7 @@ http {
             proxy_set_header X-Forwarded-Proto $scheme;
         }
 
-        # Redirección a /yahya para el contenedor de Yahya
+        # Redirección a /yahya para el contenedor de yahya.com
         location /yahya {
             proxy_pass http://yahya_server;
             proxy_set_header Host $host;
@@ -291,7 +291,7 @@ Comprobamos que `elhadri.com/seguro` funciona.
 
 Comprobamos que `elhadri.com/seguro/secreto` funciona y nos pide iniciar sesión con nuestro usuario y contraseña. Y funciona.
 
-<img src="imagenes/user.png"width="400">
+<img src="imagenes/user.png" width="400">
 <img src="imagenes/secreto.png" width="400">
 
 
