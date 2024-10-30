@@ -1,0 +1,21 @@
+server {
+    listen 80; 
+    listen [::]:80;
+
+    server_name elhadri.com; 
+
+    root /var/www/html/elhadri.com;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html; 
+    }
+
+
+    error_page 404 /error_404.html;
+    location = /error_404.html {
+        root /var/www/html/elhadri.com;
+        internal;
+    }
+
+}

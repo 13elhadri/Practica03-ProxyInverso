@@ -1,0 +1,23 @@
+server {
+    listen 80; 
+    listen [::]:80;
+
+    server_name yahya.com; 
+
+    root /var/www/html/yahya.com;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+
+    location /yahya {
+        try_files $uri $uri/ /index.html; 
+    }
+
+    error_page 404 /error_404.html;
+    location = /error_404.html {
+        root /var/www/html/yahya.com;
+        internal;
+    }
+}
+}
